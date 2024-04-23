@@ -9,27 +9,77 @@
 
 <body class="bg-[#FFD845]">
 
-    <div class="container flex justify-between items-start mb-[70px] mt-[50px]">
-        <a class=" " href="./index.html">
-            <img src="./image/pokemon_logo.svg" alt="">
-        </a>
-        <img class="" src="./image/header-like-icon.svg" alt="">
+    <div class="container flex justify-between items-start mb-[70px] mt-[50px] ">
+        <div class="ml-[350px] ">
+            <a href="./index.html">
+                <img src="./image/pokemon_logo.svg" alt="">
+            </a>
+        </div>
+        <div>
+            <button><img class="" src="./image/header-like-icon.svg" alt="">
+            </button>
+        </div>
     </div>
 
 
 
+    <div class="container flex items-center justify-center gap-[35px] mb-[100px]  ">
+        <div>
+            <button
+                class="flex items-center justify-between gap-2.5 bg-white py-4 px-[81px] rounded-xl border-2 border-black font-bold text-xl ">Gross
+                <img src="./image/down-arrow.svg" alt="">
+            </button>
+        </div>
 
+        <div>
+            <button
+                class="flex items-center justify-between gap-[141px] bg-white  py-4 px-7.5 rounded-xl border-2 border-black font-bold text-xl ">Search
+                <img src="./image/search-logo.svg" alt="">
+            </button>
+        </div>
+
+        <div>
+            <button
+                class="flex items-center justify-between gap-2.5 bg-white py-4 px-[80px] rounded-xl border-2 border-black font-bold text-xl ">Aa-Zz
+                <img src="./image/down-arrow.svg" alt="">
+            </button>
+        </div>
+
+        <div>
+            <button class="bg-white py-4 px-16 rounded-xl border-2 border-black font-bold text-xl ">
+                Button
+            </button>
+        </div>
+    </div>
+
+
+
+    <ul class="list container grid grid-cols-4 gap-7.5">
+
+    </ul>
+
+
+
+    <script src="./script/pokemons.js"></script>
     <script src="./script/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
-                container: {
-                    padding: '113px',
-                    extend: {
-                        colors: {
-                            clifford: '#da373d',
-                        }
+                extend: {
+                    container: {
+                        center: true,
+                        padding: '112px',
+                    },
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    gap: {
+                        7.5 : '30px',
+                    },
+                    padding: {
+                        7.5 : '30px',
+                        17 : '68px',
                     }
                 }
             }
