@@ -3,8 +3,6 @@ const elList = document.querySelector('.list')
 const elModal = document.querySelector('.modal')
 const elHeaderLikeIcon = document.querySelector('.header-like-icon')
 
-let likedData = []
-
 createCards(pokemons, elList)
 
 function createCards(data, parent) {
@@ -58,7 +56,14 @@ function createCards(data, parent) {
         // /append
 
         newDownCartBtn.addEventListener("click", () => {
-            likedData.push(item)
+
+            const oldLikedData = JSON.parse(localStorage.getItem("likedData")) || [];
+
+            localStorage.setItem("likedData", JSON.stringify([
+                ...oldLikedData,
+                item
+            ]))
+
             newDownCartLike.setAttribute('class', 'bg-red-500 rounded-full p-2')
 
         })
@@ -88,6 +93,8 @@ newModalList.append(newModalItem)
 
 
 elHeaderLikeIcon.addEventListener('click', (e) => {
+    const likedData = JSON.parse(localStorage.getItem("likedData")) || [];
+
     createCards(likedData, elModal)
     elHeaderLikeIcon.setAttribute('class', 'bg-red-500 rounded-full ')
     elModal.style.visibility = 'visible'
