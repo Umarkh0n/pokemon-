@@ -64,7 +64,7 @@ function createCards(data, parent) {
                 item
             ]))
 
-            newDownCartLike.setAttribute('class', 'bg-red-500 rounded-full p-2')
+            localStorage.setItem( newDownCartLike.setAttribute('class', 'bg-red-500 rounded-full p-2'))  
 
         })
     }
@@ -92,7 +92,7 @@ newModalList.append(newModalItem)
 
 
 
-elHeaderLikeIcon.addEventListener('click', (e) => {
+elHeaderLikeIcon.addEventListener('click', () => {
     const likedData = JSON.parse(localStorage.getItem("likedData")) || [];
 
     createCards(likedData, elModal)
